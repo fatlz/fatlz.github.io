@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+    <title>M. Fatih Ali - Programmer</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px;
+        /* Advanced styling tanpa Jekyll */
+        :root { --primary: #007acc; }
+        .project-card { 
+            border: 1px solid #ddd; 
+            padding: 20px; 
+            margin: 15px 0;
+            border-radius: 8px;
         }
-        h1 { color: #333; }
+        .tech-badge { 
+            background: var(--primary); 
+            color: white; 
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-    <h1>🚀 Hello World!</h1>
-    <p>Portfolio programmer sedang dibangun...</p>
-    <p><strong>Tech Stack:</strong> GitHub Pages + HTML/CSS</p>
+    <header>
+        <h1>🚀 M. Fatih Ali</h1>
+        <p>Full-Stack Developer | JavaScript Specialist</p>
+    </header>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>E-commerce Platform</h3>
+            <p>Full-stack e-commerce dengan React & Node.js</p>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+        </div>
+    </section>
 </body>
 </html>
