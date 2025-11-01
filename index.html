@@ -5,6 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fatih - Programmer Portfolio</title>
     <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            left: 0;
+        }
+        
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* BIAR SCROLL SMOOTH */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* BIAR HEADER GAK KETUTUP NAVBAR */
+        body {
+            padding-top: 80px;
+        }
         /* BASIC RESET */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -86,6 +143,19 @@
     </style>
 </head>
 <body>
+    <!-- NAVBAR BARU -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">🚀 Fatih</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- HEADER SECTION -->
     <header>
         <h1>M. Fatih Ali</h1>
@@ -134,7 +204,8 @@
                 <span class="tech-badge">GitHub Pages</span>
             </div>
             <div style="margin-top: 15px;">
-                <a href="https://github.com/faitk/faitk.github.io" style="color: #667eea; text-decoration: none; font-weight: bold;">📁 View Source Code</a>
+                <!-- GANTI LINK GITHUB LU DI SINI -->
+                <a href="https://github.com/faitk" style="color: #667eea; text-decoration: none; font-weight: bold;" target="_blank">📁 View Source Code</a>
             </div>
         </div>
         
@@ -153,12 +224,13 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <h2>📫 Let's Connect!</h2>
-        <p> Tertarik berkolaborasi atau sekedar ngobrol tentang tech? Reach out ke saya!</p>
+        <p>Tertarik berkolaborasi atau sekedar ngobrol tentang tech? Reach out ke saya!</p>
         
         <div class="contact-links">
+            <!-- GANTI LINK GITHUB & LINKEDIN LU DI SINI -->
             <a href="https://github.com/faitk" target="_blank">🐙 GitHub</a>
             <a href="https://linkedin.com/in/faitk" target="_blank">💼 LinkedIn</a>
-            <a href="mailto:your-email@example.com">📧 Email</a>
+            <a href="mailto:fatih@example.com">📧 Email</a>
         </div>
     </section>
 
@@ -167,4 +239,4 @@
         <p>Built by Fatih.</p>
     </footer>
 </body>
-</html>
+</html>                                                                                                    
