@@ -1,40 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>M. Fatih Ali - Programmer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faitk - Programmer Portfolio</title>
     <style>
-        /* Advanced styling tanpa Jekyll */
-        :root { --primary: #007acc; }
-        .project-card { 
-            border: 1px solid #ddd; 
-            padding: 20px; 
+        /* BASIC RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        /* SECTIONS */
+        section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        /* PROJECT CARDS */
+        .project-card {
+            background: white;
+            padding: 20px;
             margin: 15px 0;
             border-radius: 8px;
+            border-left: 4px solid #667eea;
         }
-        .tech-badge { 
-            background: var(--primary); 
-            color: white; 
-            padding: 5px 10px;
+        
+        .tech-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
             border-radius: 15px;
-            font-size: 14px;
+            font-size: 0.8em;
+            margin: 5px 5px 5px 0;
+        }
+        
+        /* CONTACT */
+        .contact-links a {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
+    <!-- HEADER SECTION -->
     <header>
-        <h1>🚀 M. Fatih Ali</h1>
-        <p>Full-Stack Developer | JavaScript Specialist</p>
+        <h1>🚀 Faitk</h1>
+        <p>Full-Stack Developer | Tech Enthusiast | Problem Solver</p>
     </header>
-    
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <h3>E-commerce Platform</h3>
-            <p>Full-stack e-commerce dengan React & Node.js</p>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">MongoDB</span>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>👋 About Me</h2>
+        <p>Halo! Saya seorang programmer yang passionate dalam pengembangan web dan teknologi. 
+           Saat ini sedang mendalami full-stack development dan membangun project-project menarik.</p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>🛠 Tech Stack</h2>
+        <div class="skills-container">
+            <h3>Currently Mastering:</h3>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Git & GitHub</span>
+            <span class="tech-badge">Responsive Design</span>
+        </div>
+        
+        <div class="skills-container" style="margin-top: 20px;">
+            <h3>Next to Learn:</h3>
+            <span class="tech-badge" style="background: #f1c40f; color: black;">React.js</span>
+            <span class="tech-badge" style="background: #f1c40f; color: black;">Node.js</span>
+            <span class="tech-badge" style="background: #f1c40f; color: black;">MongoDB</span>
+            <span class="tech-badge" style="background: #f1c40f; color: black;">Express.js</span>
         </div>
     </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>💼 Projects</h2>
+        
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>Website portfolio pertama yang dibangun dengan pure HTML & CSS, deployed menggunakan GitHub Pages.</p>
+            <p><strong>Features:</strong> Responsive design, modern layout, fast loading</p>
+            <div class="tech-stack">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">GitHub Pages</span>
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="https://github.com/faitk/faitk.github.io" style="color: #667eea; text-decoration: none; font-weight: bold;">📁 View Source Code</a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <h3>Coming Soon Project</h3>
+            <p>Sedang mengembangkan project full-stack application dengan modern tech stack.</p>
+            <p><strong>Planned Features:</strong> User authentication, database integration, REST API</p>
+            <div class="tech-stack">
+                <span class="tech-badge" style="background: #f1c40f; color: black;">React.js</span>
+                <span class="tech-badge" style="background: #f1c40f; color: black;">Node.js</span>
+                <span class="tech-badge" style="background: #f1c40f; color: black;">MongoDB</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>📫 Let's Connect!</h2>
+        <p> Tertarik berkolaborasi atau sekedar ngobrol tentang tech? Reach out ke saya!</p>
+        
+        <div class="contact-links">
+            <a href="https://github.com/faitk" target="_blank">🐙 GitHub</a>
+            <a href="https://linkedin.com/in/faitk" target="_blank">💼 LinkedIn</a>
+            <a href="mailto:your-email@example.com">📧 Email</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; color: #666;">
+        <p>© 2024 Faitk. Built with ❤️ and pure HTML/CSS</p>
+    </footer>
 </body>
 </html>
