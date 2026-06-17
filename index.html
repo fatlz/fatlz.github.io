@@ -51,6 +51,7 @@
             flex-direction: column;
             justify-content: center;
             padding: 100px 0;
+            scroll-margin-top: 100px; 
             opacity: 0;
             transform: translateY(40px);
             transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -198,12 +199,41 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
+        /* Styling Logo Baru yang Lebih Menarik */
         .nav-logo {
-            color: var(--accent-color);
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-logo .code-bracket {
+            color: var(--accent-color);
+            font-family: monospace;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        .nav-logo .name-main {
+            color: var(--text-main);
+            margin: 0 6px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo .name-highlight {
+            color: var(--accent-color);
+            text-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
+        }
+
+        .nav-logo:hover .name-main {
+            color: #ffffff;
         }
 
         .nav-links {
@@ -249,6 +279,14 @@
                 padding: 1.2rem 1.5rem;
             }
 
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-logo .code-bracket {
+                font-size: 1.4rem;
+            }
+
             .hamburger {
                 display: flex;
             }
@@ -289,6 +327,7 @@
 
             section {
                 padding: 80px 0;
+                scroll-margin-top: 80px; 
             }
 
             h1 { font-size: 2.5rem; }
@@ -315,7 +354,12 @@
     <canvas id="aquariumCanvas"></canvas>
 
     <nav>
-        <a href="#home" class="nav-logo">M. Fatih</a>
+        <a href="#home" class="nav-logo">
+            <span class="code-bracket">&lt;</span>
+            <span class="name-main">M. Fatih Ali</span>
+            <span class="name-highlight">Z.</span>
+            <span class="code-bracket">/&gt;</span>
+        </a>
         
         <div class="hamburger" id="hamburgerMenu">
             <span></span>
