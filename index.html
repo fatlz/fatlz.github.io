@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | M. Fatih Ali Zam-zami</title>
     <style>
-        /* Skema Warna Tetap Sama (Nyaman di mata) */
         :root {
             --ocean-dark: #051024;
             --ocean-light: #10223f;
@@ -29,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Canvas Background */
         #aquariumCanvas {
             position: fixed;
             top: 0;
@@ -39,7 +37,6 @@
             z-index: -1;
         }
 
-        /* Layout & Glassmorphism Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -89,7 +86,21 @@
             max-width: 700px;
         }
 
-        /* Glassmorphism Cards */
+        .greeting {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        .subtitle {
+            font-size: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .desc {
+            margin-top: 20px;
+        }
+
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
@@ -107,7 +118,11 @@
             box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
         }
 
-        /* Portfolio Grid */
+        .glass-card h3 {
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -123,6 +138,7 @@
             font-weight: bold;
             position: relative;
         }
+
         .repo-link::after {
             content: '';
             position: absolute;
@@ -135,12 +151,21 @@
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
+
         .repo-link:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
 
-        /* Contact Section */
+        .contact-wrapper {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-wrapper p {
+            margin: 0 auto;
+        }
+
         .contact-btn {
             display: inline-block;
             padding: 1rem 2.5rem;
@@ -159,7 +184,6 @@
             box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
         }
 
-        /* Navbar */
         nav {
             position: fixed;
             top: 0;
@@ -180,6 +204,45 @@
         }
 
         nav a:hover { color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            nav {
+                justify-content: center;
+                padding: 1rem;
+                flex-wrap: wrap;
+                background: rgba(5, 16, 36, 0.95);
+            }
+
+            nav a {
+                margin: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.8rem; }
+            h2 { font-size: 2rem; }
+            
+            h2::after {
+                width: 100px;
+                margin-left: 15px;
+            }
+
+            .glass-card {
+                padding: 1.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -195,10 +258,10 @@
 
     <div class="container">
         <section id="home" class="visible">
-            <p style="color: var(--accent-color); margin-bottom: 10px; font-family: monospace;">Halo, selamat datang. Saya</p>
+            <p class="greeting">Halo, selamat datang. Saya</p>
             <h1>M. Fatih Ali <span>Zam-zami</span></h1>
-            <h1 style="font-size: 3rem; color: var(--text-secondary);">Membangun solusi digital.</h1>
-            <p style="margin-top: 20px;">
+            <h1 class="subtitle">Membangun solusi digital.</h1>
+            <p class="desc">
                 Saya seorang pengembang perangkat lunak yang berfokus pada perancangan arsitektur sistem dan implementasi kode yang efisien.
             </p>
         </section>
@@ -217,17 +280,17 @@
             <h2>Portofolio</h2>
             <div class="portfolio-grid">
                 <div class="glass-card">
-                    <h3 style="color: var(--text-main); margin-bottom: 10px;">Struktur Data & Algoritma</h3>
+                    <h3>Struktur Data & Algoritma</h3>
                     <p>Implementasi tingkat lanjut mengenai Linked List, Sorting, dan antrian (Queues) untuk optimasi alur data.</p>
                     <a href="#" class="repo-link">Lihat di Repository →</a>
                 </div>
                 <div class="glass-card">
-                    <h3 style="color: var(--text-main); margin-bottom: 10px;">Analisis Konservasi AI</h3>
+                    <h3>Analisis Konservasi AI</h3>
                     <p>Proyek pengembangan indikator pelestarian lingkungan yang melibatkan pemrosesan data dan otomasi alur kerja.</p>
                     <a href="#" class="repo-link">Lihat di Repository →</a>
                 </div>
                 <div class="glass-card">
-                    <h3 style="color: var(--text-main); margin-bottom: 10px;">Aplikasi Produktivitas</h3>
+                    <h3>Aplikasi Produktivitas</h3>
                     <p>Membangun antarmuka terintegrasi yang menggabungkan berbagai pustaka *front-end* untuk kenyamanan pengguna.</p>
                     <a href="#" class="repo-link">Lihat di Repository →</a>
                 </div>
@@ -236,8 +299,8 @@
 
         <section id="contact">
             <h2>Kontak</h2>
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="margin: 0 auto;">
+            <div class="contact-wrapper">
+                <p>
                     Saya selalu terbuka untuk mendiskusikan peluang baru, kolaborasi, maupun sekadar bertukar wawasan teknis.
                 </p>
                 <a href="mailto:emailanda@gmail.com" class="contact-btn">Kirim Pesan</a>
@@ -246,7 +309,6 @@
     </div>
 
     <script>
-        // --- 1. Logika Scroll Fade-In ---
         const sections = document.querySelectorAll('section');
         const observerOptions = { root: null, threshold: 0.15 };
         const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -256,7 +318,6 @@
         }, observerOptions);
         sections.forEach(section => { sectionObserver.observe(section); });
 
-        // --- 2. Logika Canvas (Ikan Beragam & Gelembung Realistis) ---
         const canvas = document.getElementById('aquariumCanvas');
         const ctx = canvas.getContext('2d');
         let width, height;
@@ -270,16 +331,14 @@
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        // --- Class Gelembung ---
         class Bubble {
             constructor() {
                 this.reset(true);
             }
             reset(randomY = false) {
-                this.size = Math.random() * 5 + 1; // Ukuran bervariasi
+                this.size = Math.random() * 5 + 1;
                 this.x = Math.random() * width;
                 this.y = randomY ? Math.random() * height : height + 10;
-                // Gelembung besar naik lebih cepat
                 this.speed = (Math.random() * 1 + 0.5) * (this.size / 3);
                 this.wobbleSpeed = Math.random() * 0.03 + 0.01;
                 this.wobbleDistance = Math.random() * 1.5 + 0.5;
@@ -296,14 +355,12 @@
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 
-                // Lingkaran luar gelembung
                 ctx.beginPath();
                 ctx.arc(0, 0, this.size, 0, Math.PI * 2);
                 ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
                 ctx.lineWidth = 1;
                 ctx.stroke();
 
-                // Pantulan cahaya (glare) supaya terlihat seperti kaca/air
                 ctx.beginPath();
                 ctx.arc(-this.size * 0.3, -this.size * 0.3, this.size * 0.25, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 2})`;
@@ -313,45 +370,40 @@
             }
         }
 
-        // --- Class Ikan (Advanced) ---
         class Fish {
             constructor() {
                 this.reset();
             }
             
             reset() {
-                this.x = Math.random() > 0.5 ? -100 : width + 100; // Muncul dari luar layar
+                this.x = Math.random() > 0.5 ? -100 : width + 100;
                 this.y = Math.random() * (height * 0.8) + (height * 0.1);
                 
-                // Variasi bentuk: ada yg gemuk, ada yg kurus panjang
                 this.size = Math.random() * 12 + 8;
                 this.bodyLength = Math.random() * 1.8 + 1.2; 
                 
                 this.speed = Math.random() * 1.2 + 0.4;
                 this.direction = this.x < 0 ? 1 : -1;
                 
-                // Variasi Warna (Palet Gradasi)
                 const palettes = [
-                    ['#ff7e5f', '#feb47b'], // Koi / Orange
-                    ['#00c6ff', '#0072ff'], // Neon Blue
-                    ['#11998e', '#38ef7d'], // Emerald
-                    ['#f12711', '#f5af19'], // Fire
-                    ['#8e2de2', '#4a00e0']  // Purple/Deep sea
+                    ['#ff7e5f', '#feb47b'],
+                    ['#00c6ff', '#0072ff'],
+                    ['#11998e', '#38ef7d'],
+                    ['#f12711', '#f5af19'],
+                    ['#8e2de2', '#4a00e0']
                 ];
                 this.colors = palettes[Math.floor(Math.random() * palettes.length)];
                 
                 this.offsetY = Math.random() * 100;
                 this.tailAngle = 0;
-                this.tailSpeed = this.speed * 0.15; // Kibasan ekor sesuai kecepatan
+                this.tailSpeed = this.speed * 0.15;
             }
 
             update() {
                 this.x += this.speed * this.direction;
-                // Gerak naik turun bergelombang natural
                 this.y += Math.sin(Date.now() * 0.001 + this.offsetY) * 0.4;
                 this.tailAngle += this.tailSpeed;
 
-                // Jika ikan keluar jauh dari layar, reset posisinya
                 if ((this.direction === 1 && this.x > width + 150) || 
                     (this.direction === -1 && this.x < -150)) {
                     this.reset();
@@ -361,31 +413,27 @@
             draw() {
                 ctx.save();
                 ctx.translate(this.x, this.y);
-                if (this.direction === -1) ctx.scale(-1, 1); // Balik badan kalau ke kiri
+                if (this.direction === -1) ctx.scale(-1, 1);
 
-                const tailWag = Math.sin(this.tailAngle) * 0.4; // Sudut kibasan ekor
+                const tailWag = Math.sin(this.tailAngle) * 0.4;
 
-                // Gradasi warna tubuh
                 let grad = ctx.createLinearGradient(-this.size * this.bodyLength, 0, this.size * this.bodyLength, 0);
                 grad.addColorStop(0, this.colors[1]);
                 grad.addColorStop(1, this.colors[0]);
                 ctx.fillStyle = grad;
 
-                // 1. Sirip Atas (Dorsal Fin)
                 ctx.beginPath();
                 ctx.moveTo(0, -this.size * 0.5);
                 ctx.quadraticCurveTo(-this.size * 0.5, -this.size * 1.5, -this.size * 1.2, -this.size * 0.2);
                 ctx.fill();
 
-                // 2. Sirip Bawah (Pectoral Fin)
                 ctx.beginPath();
                 ctx.moveTo(0, this.size * 0.5);
                 ctx.quadraticCurveTo(-this.size * 0.5, this.size * 1.2, -this.size * 0.8, this.size * 0.2);
                 ctx.fill();
 
-                // 3. Ekor Bergerak (Wagging Tail)
                 ctx.save();
-                ctx.translate(-this.size * this.bodyLength + 2, 0); // Titik pivot ekor di pangkal tubuh
+                ctx.translate(-this.size * this.bodyLength + 2, 0);
                 ctx.rotate(tailWag);
                 ctx.beginPath();
                 ctx.moveTo(0, 0);
@@ -396,18 +444,16 @@
                 ctx.fill();
                 ctx.restore();
 
-                // 4. Tubuh Utama (Elips memanjang)
                 ctx.beginPath();
                 ctx.ellipse(0, 0, this.size * this.bodyLength, this.size * 0.7, 0, 0, Math.PI * 2);
                 ctx.fill();
 
-                // 5. Mata
                 ctx.fillStyle = 'white';
                 ctx.beginPath();
                 ctx.arc(this.size * (this.bodyLength * 0.6), -this.size * 0.15, this.size * 0.2, 0, Math.PI * 2);
                 ctx.fill();
                 
-                ctx.fillStyle = '#051024'; // Pupil gelap
+                ctx.fillStyle = '#051024';
                 ctx.beginPath();
                 ctx.arc(this.size * (this.bodyLength * 0.6) + 1, -this.size * 0.15, this.size * 0.1, 0, Math.PI * 2);
                 ctx.fill();
@@ -416,13 +462,10 @@
             }
         }
 
-        // Inisialisasi
         for (let i = 0; i < 50; i++) bubbles.push(new Bubble());
         for (let i = 0; i < 12; i++) fishes.push(new Fish());
 
-        // Loop Animasi
         function animate() {
-            // Efek background trail yang halus
             ctx.clearRect(0, 0, width, height);
 
             bubbles.forEach(bubble => {
@@ -430,7 +473,6 @@
                 bubble.draw();
             });
 
-            // Urutkan ikan dari yang paling jauh (size kecil) ke depan agar tidak saling tindih aneh
             fishes.sort((a, b) => a.size - b.size);
             fishes.forEach(fish => {
                 fish.update();
